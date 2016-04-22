@@ -24,7 +24,7 @@ public class AuthConfigTest {
     @Test
     public void serderDocs1() throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
-        final JavaType type = mapper.getTypeFactory().uncheckedSimpleType(AuthConfig.class);
+        final JavaType type = mapper.getTypeFactory().constructType(AuthConfig.class);
 
         final AuthConfig authConfig = testRoundTrip(RemoteApiVersion.VERSION_1_22,
                 "/other/AuthConfig/docs1.json",
@@ -46,7 +46,7 @@ public class AuthConfigTest {
     @Test
     public void serderDocs2() throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
-        final JavaType type = mapper.getTypeFactory().uncheckedSimpleType(AuthConfig.class);
+        final JavaType type = mapper.getTypeFactory().constructType(AuthConfig.class);
 
         final AuthConfig authConfig = testRoundTrip(RemoteApiVersion.VERSION_1_22,
                 "/other/AuthConfig/docs2.json",

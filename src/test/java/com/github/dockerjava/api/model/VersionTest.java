@@ -18,7 +18,7 @@ public class VersionTest {
     @Test
     public void testSerDer1() throws Exception {
         final ObjectMapper mapper = new ObjectMapper();
-        final JavaType type = mapper.getTypeFactory().uncheckedSimpleType(Version.class);
+        final JavaType type = mapper.getTypeFactory().constructType(Version.class);
 
         final Version version = testRoundTrip(RemoteApiVersion.VERSION_1_22,
                 "/version/1.json",
